@@ -38,7 +38,7 @@ const PLATFORMS: Platform[] = [
     achievements: [
       "Global Rank 716 in Biweekly Contest 151 out of 29K+ participants",
       "1100+ problems solved across all difficulty levels",
-      "Peak rating of 2039 in the top ~3% globally",
+      "Peak rating of 2039 in the top ~2% globally",
     ],
   },
   {
@@ -77,7 +77,6 @@ const PLATFORMS: Platform[] = [
     ),
     achievements: [
       "Global Rank 108 in CodeChef Starters 174 Div.3",
-      "2nd Prize in Winter of Code 7.0 at MSTC DA-IICT (65+ participants)",
       "Consistent 3-star rated competitive coder",
     ],
   },
@@ -219,7 +218,7 @@ const PlatformRow = ({
           {platform.achievements.map((ach, i) => (
             <li
               key={i}
-              className="flex items-start gap-2.5 text-sm text-muted-foreground leading-relaxed"
+              className="flex items-start gap-2.5 text-sm text-textcolor leading-relaxed"
             >
               <span
                 className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"
