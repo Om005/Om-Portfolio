@@ -215,7 +215,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Bio text */}
-                <p className="text-muted-foreground text-lg leading-relaxed font-sans max-w-3xl pt-4">
+                <p className="text-textcolor text-lg leading-relaxed font-sans max-w-3xl pt-4">
                   I am a passionate software developer with expertise in building real-time collaborative
                   platforms, scalable backend architectures, and secure web applications. My work combines
                   technical system design with clean, user-focused implementations. With over 2100+ coding

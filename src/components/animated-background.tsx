@@ -9,6 +9,7 @@ import { sleep } from "@/lib/utils";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { usePreloader } from "./preloader";
 import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
 import { Section, getKeyboardState } from "./animated-background-config";
 import { useSounds } from "./realtime/hooks/use-sounds";
 import { usePerfProfile } from "@/hooks/use-perf-profile";
@@ -16,6 +17,7 @@ import { usePerfProfile } from "@/hooks/use-perf-profile";
 gsap.registerPlugin(ScrollTrigger);
 
 const KeyboardScene = ({ maxDpr }: { maxDpr: number }) => {
+  const pathname = usePathname();
   const { isLoading, bypassLoading } = usePreloader();
   const { theme } = useTheme();
   const isMobile = useMediaQuery("(max-width: 767px)");
@@ -139,6 +141,11 @@ const KeyboardScene = ({ maxDpr }: { maxDpr: number }) => {
     const heroState = getKeyboardState({ section: "hero", isMobile });
     gsap.set(kbd.scale, heroState.scale);
     gsap.set(kbd.position, heroState.position);
+
+    // Only apply section scroll animations on the home page!
+    if (pathname !== "/") {
+      return [];
+    }
 
     // Section transitions
     return [

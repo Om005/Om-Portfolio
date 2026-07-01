@@ -46,12 +46,10 @@ const HeroSection = () => {
                 </BlurIn>
 
                 <BlurIn delay={1}>
-                  <Tooltip delayDuration={300}>
-                    <TooltipTrigger asChild>
                       <h1
                         className={cn(
                           "-ml-[6px] leading-none text-transparent text-slate-800 text-left",
-                          "font-bold text-7xl md:text-7xl lg:text-8xl xl:text-9xl",
+                          "font-bold text-7xl md:text-7xl lg:text-8xl xl:text-8xl",
                           "cursor-default text-edge-outline font-display "
                         )}
                       >
@@ -59,14 +57,6 @@ const HeroSection = () => {
                         <br className="md:block hidden" />
                         {config.author.split(" ")[1]}
                       </h1>
-                    </TooltipTrigger>
-                    <TooltipContent
-                      side="top"
-                      className="dark:bg-white dark:text-black"
-                    >
-                      theres something waiting for you in devtools
-                    </TooltipContent>
-                  </Tooltip>
                 </BlurIn>
                 <BlurIn delay={1.2}>
                   <p
@@ -85,7 +75,7 @@ const HeroSection = () => {
                       "cursor-default"
                     )}
                   >
-                    B.Tech ICT @ DA-IICT &nbsp;·&nbsp; LeetCode Knight 2039 &nbsp;·&nbsp; CF Specialist 1438
+                    I build scalable, real-time web applications from concept to production using React, Next.js, Node.js, and modern AI tools. I focus on clean architecture, great user experiences, and practical problem-solving, backed by 2,100+ coding challenges solved.
                   </p>
                 </BlurIn>
               </div>
@@ -105,17 +95,19 @@ const HeroSection = () => {
                 <div className="md:self-start flex gap-3">
                   <Tooltip delayDuration={300}>
                     <TooltipTrigger asChild>
-                      <Link href={"#contact"}>
+                      <Link href={"/about"}>
                         <Button
                           variant={"outline"}
                           className="block w-full overflow-hidden"
                         >
-                          Hire Me
+                          About Me
                         </Button>
                       </Link>
                     </TooltipTrigger>
                     <TooltipContent side="bottom">
-                      <p>pls 🥹 🙏</p>
+                      <p>
+                      Learn more about me
+                      </p>
                     </TooltipContent>
                   </Tooltip>
                   <div className="flex items-center h-full gap-2">
