@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 import projects, { Project } from "@/data/projects";
 import { SectionHeader } from "./section-header";
@@ -67,7 +67,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <span className="text-xs text-muted-foreground font-mono">
+              <span className="text-xs text-textcolor font-mono">
                 Developed by Om Chavda
               </span>
             </div>
@@ -84,7 +84,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
               href={`/project/${project.id}`}
               className="font-bold text-foreground/80 hover:text-foreground flex items-center gap-1.5 transition-colors cursor-can-hover"
             >
-              Read case study <span className="text-base">→</span>
+              Read case study <span className="text-base"><ArrowRight className="w-4 h-4" /></span>
             </Link>
 
             {project.live && project.live !== "#" && (

@@ -6,6 +6,7 @@ import SectionWrapper from "../ui/section-wrapper";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { config } from "@/data/config";
+import { ArrowUpRight } from "lucide-react";
 
 type Platform = {
   name: string;
@@ -149,7 +150,7 @@ const PlatformRow = ({
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: index * 0.12, ease: "easeOut" }}
       viewport={{ once: true, margin: "-50px" }}
-      className="flex gap-6 bg-white/15 backdrop-blur-md border border-white/20 rounded-2xl px-6 py-8 shadow-lg md:gap-10 relative"
+      className="flex gap-6 bg-[var(--bgcolor)] backdrop-blur-md border border-white/20 rounded-2xl px-6 py-8 shadow-lg md:gap-10 relative"
     >
       {/* Dot on connector line */}
       <div className="flex-shrink-0 flex flex-col items-center mt-1">
@@ -174,8 +175,8 @@ const PlatformRow = ({
               <span className="font-display font-bold text-xl md:text-2xl text-foreground">
                 {platform.name}
               </span>
-              <span className="text-xs text-muted-foreground font-mono opacity-60 group-hover:opacity-100 transition-opacity">
-                @{platform.handle} ↗
+              <span className="text-xs flex gap-1 items-center text-textcolor font-mono opacity-60 group-hover:opacity-100 transition-opacity">
+                @{platform.handle} <ArrowUpRight className="w-4 h-4" />
               </span>
             </Link>
           </div>
