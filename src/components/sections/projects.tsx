@@ -11,9 +11,9 @@ import ScrollingPreview from "../scrolling-preview";
 
 const ProjectsSection = () => {
   return (
-    <SectionWrapper id="projects" className="max-w-5xl mx-auto py-20 px-4">
-      <SectionHeader id="projects" title="Projects" desc="Selected work and case studies." className="mb-20" />
-      <div className="flex flex-col gap-28 md:gap-36 w-full">
+    <SectionWrapper id="projects" className="max-w-5xl mx-auto py-10 md:py-20 px-4">
+      <SectionHeader id="projects" title="Projects" desc="Selected work and case studies." className="mb-8 md:mb-20" />
+      <div className="flex flex-col gap-16 md:gap-36 w-full">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
@@ -46,7 +46,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
       </Link>
 
       {/* Details section below image */}
-      <div className="grid bg-[var(--bgcolor)] backdrop-blur-md border border-white/20 rounded-2xl px-6 py-8 shadow-lg grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 mt-8">
+      <div className="grid bg-[var(--bgcolor)] backdrop-blur-md border border-white/20 rounded-2xl px-4 sm:px-6 py-6 sm:py-8 shadow-lg grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-12 mt-6 md:mt-8">
         {/* Left Column: Title and Category */}
         <div className="col-span-1 flex flex-col justify-start">
           <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground leading-tight tracking-tight">

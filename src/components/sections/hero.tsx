@@ -27,7 +27,7 @@ const HeroSection = () => {
             "h-[calc(100dvh-3rem)] md:h-[calc(100dvh-4rem)] z-[2]",
             "col-span-1",
             "flex flex-col justify-start md:justify-center items-center md:items-start",
-            "pt-28 sm:pb-16 md:p-20 lg:p-24 xl:p-28"
+            "pt-24 px-5 sm:px-8 sm:pb-16 md:p-20 lg:p-24 xl:p-28"
           )}
         >
           {!isLoading && (
@@ -37,7 +37,7 @@ const HeroSection = () => {
                   <p
                     className={cn(
                       "md:self-start mt-4 font-medium text-md text-slate-500 dark:text-zinc-400",
-                      "cursor-default sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
+                      "cursor-default sm:text-xl md:text-xl bg-clip-text "
                     )}
                   >
                     Hi, I am
@@ -49,7 +49,7 @@ const HeroSection = () => {
                       <h1
                         className={cn(
                           "-ml-[6px] leading-none text-transparent text-slate-800 text-left",
-                          "font-bold text-7xl md:text-7xl lg:text-8xl xl:text-8xl",
+                          "font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl",
                           "cursor-default text-edge-outline font-display "
                         )}
                       >
@@ -61,8 +61,8 @@ const HeroSection = () => {
                 <BlurIn delay={1.2}>
                   <p
                     className={cn(
-                      "md:self-start md:mt-4 font-medium text-md text-slate-500 dark:text-zinc-400",
-                      "cursor-default sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
+                      "md:self-start md:mt-4 font-medium text-sm text-slate-500 dark:text-zinc-400",
+                      "cursor-default sm:text-xl md:text-xl bg-clip-text "
                     )}
                   >
                     Backend Engineer &amp; Full Stack Developer
@@ -71,7 +71,7 @@ const HeroSection = () => {
                 <BlurIn delay={1.4}>
                   <p
                     className={cn(
-                      "md:self-start mt-1 font-medium text-sm text-slate-400 dark:text-zinc-500",
+                      "md:self-start mt-1 font-medium text-xs sm:text-sm text-slate-400 dark:text-zinc-500",
                       "cursor-default"
                     )}
                   >
@@ -79,7 +79,7 @@ const HeroSection = () => {
                   </p>
                 </BlurIn>
               </div>
-              <div className="mt-8 flex flex-col gap-3 w-fit">
+              <div className="mt-6 flex flex-col gap-3 w-full sm:w-fit">
                 <Link
                   href={"/resume"}
                   className="flex-1"

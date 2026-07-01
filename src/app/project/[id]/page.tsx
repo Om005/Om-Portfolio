@@ -34,7 +34,7 @@ export default function ProjectPage({ params }: PageProps) {
       <AnimatedBackground />
       <main className="min-h-screen bg-slate-100 dark:bg-transparent pb-32 relative z-10">
         {/* Back navigation - shifted down to pt-28 to prevent fixed header overlap */}
-        <div className="max-w-4xl mx-auto px-6 pt-28 pb-4">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-24 md:pt-28 pb-4">
           <Link
             href="/"
             className="group inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-foreground transition-colors cursor-can-hover"
@@ -44,13 +44,13 @@ export default function ProjectPage({ params }: PageProps) {
           </Link>
         </div>
 
-        <div className="max-w-4xl mx-auto px-6 space-y-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-10 md:space-y-16">
           {/* Title Area */}
           <div className="space-y-2">
             <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground font-mono font-semibold">
               {project.category}
             </span>
-            <h1 className="font-display text-4xl md:text-6xl font-black text-foreground tracking-tight">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-black text-foreground tracking-tight">
               {project.title}
             </h1>
           </div>

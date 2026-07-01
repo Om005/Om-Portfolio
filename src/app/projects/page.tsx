@@ -10,7 +10,7 @@ export default function ProjectsPage() {
     <SmoothScroll>
       <AnimatedBackground />
       {/* Container matches standard page padding, uses transparent background to ensure 3D canvas is visible */}
-      <main className="min-h-screen bg-transparent pb-32 relative z-[2] pt-28">
+      <main className="min-h-screen bg-transparent pb-32 relative z-[2] pt-20 md:pt-28">
         <ProjectsSection />
       </main>
     </SmoothScroll>

@@ -95,14 +95,14 @@ export default function AboutPage() {
   return (
     <SmoothScroll>
       <AnimatedBackground />
-      <main className="min-h-screen bg-transparent pb-32 relative z-1 pt-28">
-        <div className="max-w-6xl mx-auto px-6">
+      <main className="min-h-screen bg-transparent pb-32 relative z-1 pt-24 md:pt-28">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-16">
             
             {/* Left Column: Sticky Outline Navigation (Desktop only) */}
             <div className="hidden lg:block lg:col-span-1">
               <div className="sticky top-28 space-y-6">
-                <nav className="flex flex-col gap-4 font-mono text-2xl">
+                <nav className="flex flex-col gap-4 font-mono text-base lg:text-lg">
                   <div className="space-y-2">
                     <a
                       href="#about-me"
@@ -153,7 +153,7 @@ export default function AboutPage() {
             </div>
 
             {/* Right Column: Scrollable Main Content */}
-            <div className="lg:col-span-3 space-y-24">
+            <div className="lg:col-span-3 space-y-12 md:space-y-16 lg:space-y-24">
               
               {/* Profile Header Block */}
               <section id="about-me" className="space-y-8 scroll-mt-28">
@@ -170,10 +170,10 @@ export default function AboutPage() {
 
                   {/* Header Details */}
                   <div className="space-y-4 text-center md:text-left">
-                    <h1 className="font-display text-4xl md:text-6xl font-black text-foreground tracking-tight leading-none">
+                    <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-black text-foreground tracking-tight leading-none">
                       {config.author}
                     </h1>
-                    <p className="text-xl md:text-2xl text-muted-foreground font-mono">
+                    <p className="text-lg md:text-2xl text-muted-foreground font-mono">
                       Backend Engineer &amp; Full Stack Developer
                     </p>
 
@@ -225,7 +225,7 @@ export default function AboutPage() {
               </section>
 
               {/* Education Block */}
-              <section id="education" className="space-y-10 scroll-mt-28 border-t border-border/40 pt-16">
+              <section id="education" className="space-y-10 scroll-mt-28 border-t border-border/40 pt-10 md:pt-16">
                 <h2 className="font-display text-3xl font-black text-foreground tracking-tight">
                   Education
                 </h2>
@@ -254,7 +254,7 @@ export default function AboutPage() {
               </section>
 
               {/* Technical Skills Block */}
-              <section id="skills" className="space-y-12 scroll-mt-28 border-t border-border/40 pt-16">
+              <section id="skills" className="space-y-12 scroll-mt-28 border-t border-border/40 pt-10 md:pt-16">
                 <h2 className="font-display text-3xl font-black text-foreground tracking-tight">
                   Technical Skills
                 </h2>
@@ -311,7 +311,7 @@ export default function AboutPage() {
                     </div>
                     
                     {/* Project grid display */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-4">
                       {projects.map((project) => (
                         <Link
                           key={project.id}
@@ -348,7 +348,7 @@ export default function AboutPage() {
                     </p>
                     
                     {/* Custom Cards Grid for CP Platforms */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-4">
                       {/* LeetCode Card */}
                       <Link
                         href={config.social.leetcode}

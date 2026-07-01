@@ -85,15 +85,13 @@ const PLATFORMS: Platform[] = [
 
 const CPStatsSection = () => {
   return (
-    <SectionWrapper
-      className="flex flex-col items-center justify-center min-h-[120vh] py-20 z-10"
-    >
+    <SectionWrapper className="flex flex-col items-center justify-center min-h-[auto] py-12 md:py-20 z-10">
       <div className="w-full max-w-4xl px-4 md:px-8 mx-auto">
         <SectionHeader
           id="experience"
           title="Competitive Programming"
           desc="Problems solved. Ratings earned. Skills sharpened."
-          className="mb-12 md:mb-20 mt-0"
+          className="mb-8 md:mb-20 mt-0"
         />
 
         {/* Total problems banner */}
@@ -102,7 +100,7 @@ const CPStatsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true, margin: "-50px" }}
-          className="mb-14 flex items-center justify-center gap-10 flex-wrap"
+          className="mb-8 md:mb-14 flex items-center justify-center gap-6 sm:gap-10 flex-wrap"
         >
           {[
             { label: "Total Problems Solved", value: "2100+" },
@@ -110,7 +108,7 @@ const CPStatsSection = () => {
             { label: "Peak CF Rating", value: "1438" },
           ].map((stat) => (
             <div key={stat.label} className="flex flex-col items-center">
-              <span className="font-display text-4xl md:text-5xl font-bold text-foreground">
+              <span className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
                 {stat.value}
               </span>
               <span className="text-xs uppercase tracking-widest text-muted-foreground mt-1 text-center">
@@ -150,7 +148,7 @@ const PlatformRow = ({
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: index * 0.12, ease: "easeOut" }}
       viewport={{ once: true, margin: "-50px" }}
-      className="flex gap-6 bg-[var(--bgcolor)] backdrop-blur-md border border-white/20 rounded-2xl px-6 py-8 shadow-lg md:gap-10 relative"
+      className="flex gap-4 md:gap-6 bg-[var(--bgcolor)] backdrop-blur-md border border-white/20 rounded-2xl px-4 md:px-6 py-5 md:py-8 shadow-lg relative"
     >
       {/* Dot on connector line */}
       <div className="flex-shrink-0 flex flex-col items-center mt-1">
@@ -180,7 +178,7 @@ const PlatformRow = ({
               </span>
             </Link>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2">
             {platform.rating && (
               <span
                 className="text-sm font-mono font-semibold px-3 py-0.5 rounded-full border"
