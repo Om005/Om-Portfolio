@@ -111,7 +111,9 @@ const HeroSection = () => {
                     </TooltipContent>
                   </Tooltip>
                   <div className="flex items-center h-full gap-2">
-                    <Link
+                    <Tooltip delayDuration={300}>
+                      <TooltipTrigger asChild>
+<Link
                       href={config.social.github}
                       target="_blank"
                       className="cursor-can-hover"
@@ -120,7 +122,17 @@ const HeroSection = () => {
                         <SiGithub size={24} />
                       </Button>
                     </Link>
-                    <Link
+                      </TooltipTrigger>
+                       <TooltipContent side="bottom">
+                      <p>
+                      GitHub
+                      </p>
+                    </TooltipContent>
+                    </Tooltip>
+                    
+                    <Tooltip delayDuration={300}>
+                      <TooltipTrigger asChild>
+<Link
                       href={config.social.linkedin}
                       target="_blank"
                       className="cursor-can-hover"
@@ -129,6 +141,14 @@ const HeroSection = () => {
                         <SiLinkedin size={24} />
                       </Button>
                     </Link>
+                      </TooltipTrigger>
+                      <TooltipContent side="bottom">
+                        <p>
+                          LinkedIn
+                        </p>
+                      </TooltipContent>
+                    </Tooltip>
+                    
                   </div>
                 </div>
               </div>

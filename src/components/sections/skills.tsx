@@ -41,9 +41,9 @@ const SkillsSection = () => {
                 // the section sits inside `.canvas-overlay-mode` (pointer-events
                 // disabled so the 3D canvas can be clicked through); re-enable on
                 // the whole card so hover isn't limited to the icon/label.
-                "pointer-events-auto",
+                "bg-[var(--bgcolor)] pointer-events-auto",
                 "group relative flex flex-col items-center justify-center gap-3 overflow-hidden rounded-2xl p-5",
-                "border border-border/60 bg-secondary/20 backdrop-blur-sm",
+                "border border-border/60 backdrop-blur-sm",
                 "transition-[transform,border-color,background-color,box-shadow] duration-300",
                 "hover:-translate-y-1 hover:border-[var(--skill)] hover:bg-secondary/40",
                 "hover:shadow-[0_10px_40px_-12px_var(--skill)]"
