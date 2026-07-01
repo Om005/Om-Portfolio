@@ -87,9 +87,8 @@ export default function ProjectPage({ params }: PageProps) {
           {/* Section: Content Area from Overview Onwards */}
           <div className="space-y-12">
             {/* Avatar & Author Metadata row */}
-            <div className="flex items-center gap-3">
+            {/* <div className="flex items-center gap-3">
               <div className="relative w-8 h-8 rounded-full overflow-hidden border border-border/50">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/assets/me.jpg"
                   alt="Om Chavda"
@@ -102,7 +101,7 @@ export default function ProjectPage({ params }: PageProps) {
               <span className="text-xs text-muted-foreground font-mono">
                 June 30, 2026
               </span>
-            </div>
+            </div> */}
 
             {/* Custom Project Subheading */}
             <h2 className="font-display text-2xl md:text-3xl font-extrabold text-foreground tracking-tight">

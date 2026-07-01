@@ -46,7 +46,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
       </Link>
 
       {/* Details section below image */}
-      <div className="grid bg-white/15 backdrop-blur-md border border-white/20 rounded-2xl px-6 py-8 shadow-lg grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 mt-8">
+      <div className="grid bg-[var(--bgcolor)] backdrop-blur-md border border-white/20 rounded-2xl px-6 py-8 shadow-lg grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 mt-8">
         {/* Left Column: Title and Category */}
         <div className="col-span-1 flex flex-col justify-start">
           <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground leading-tight tracking-tight">

@@ -291,7 +291,7 @@ export default function AboutPage() {
                       ].map((category) => (
                         <div
                           key={category.title}
-                          className="bg-[var(--bgcolor)] backdrop-blur-md border border-white/20 rounded-2xl px-6 py-8 shadow-lg rounded-2xl border border-border/40 bg-secondary/5 p-5 md:p-6 space-y-4 hover:border-border/80 transition-colors duration-300"
+                          className="bg-[var(--bgcolor)] backdrop-blur-md border border-white/20 rounded-2xl px-6 py-8 shadow-lg rounded-2xl border border-border/40 p-5 md:p-6 space-y-4 hover:border-border/80 transition-colors duration-300"
                         >
                           <h4 className="font-display text-xs font-bold tracking-wider text-muted-foreground uppercase">
                             {category.title}
@@ -353,7 +353,7 @@ export default function AboutPage() {
                       <Link
                         href={config.social.leetcode}
                         target="_blank"
-                        className="bg-[var(--bgcolor)] backdrop-blur-md border border-white/20 rounded-2xl px-6 py-8 shadow-lg group flex flex-col justify-between rounded-2xl border border-border/45 bg-secondary/5 hover:bg-secondary/10 hover:border-[#FFA116]/50 shadow-sm transition-all duration-300 p-5 md:p-6 cursor-can-hover"
+                        className="bg-[var(--bgcolor)] backdrop-blur-md border border-white/20 rounded-2xl px-6 py-8 shadow-lg group flex flex-col justify-between rounded-2xl border border-border/45 hover:bg-secondary/10 hover:border-[#FFA116]/50 shadow-sm transition-all duration-300 p-5 md:p-6 cursor-can-hover"
                       >
                         <div className="space-y-4">
                           <div className="flex items-center justify-between">
@@ -384,7 +384,7 @@ export default function AboutPage() {
                       <Link
                         href={config.social.codeforces}
                         target="_blank"
-                        className="bg-[var(--bgcolor)] backdrop-blur-md border border-white/20 rounded-2xl px-6 py-8 shadow-lg group flex flex-col justify-between rounded-2xl border border-border/45 bg-secondary/5 hover:bg-secondary/10 hover:border-[#1F8ACB]/50 shadow-sm transition-all duration-300 p-5 md:p-6 cursor-can-hover"
+                        className="bg-[var(--bgcolor)] backdrop-blur-md border border-white/20 rounded-2xl px-6 py-8 shadow-lg group flex flex-col justify-between rounded-2xl border border-border/45 hover:bg-secondary/10 hover:border-[#1F8ACB]/50 shadow-sm transition-all duration-300 p-5 md:p-6 cursor-can-hover"
                       >
                         <div className="space-y-4">
                           <div className="flex items-center justify-between">
@@ -415,7 +415,7 @@ export default function AboutPage() {
                       <Link
                         href={config.social.codechef}
                         target="_blank"
-                        className="bg-[var(--bgcolor)] backdrop-blur-md border border-white/20 rounded-2xl px-6 py-8 shadow-lg group flex flex-col justify-between rounded-2xl border border-border/45 bg-secondary/5 hover:bg-secondary/10 hover:border-[#5B4638]/50 shadow-sm transition-all duration-300 p-5 md:p-6 cursor-can-hover"
+                        className="bg-[var(--bgcolor)] backdrop-blur-md border border-white/20 rounded-2xl px-6 py-8 shadow-lg group flex flex-col justify-between rounded-2xl border border-border/45 hover:bg-secondary/10 hover:border-[#5B4638]/50 shadow-sm transition-all duration-300 p-5 md:p-6 cursor-can-hover"
                       >
                         <div className="space-y-4">
                           <div className="flex items-center justify-between">

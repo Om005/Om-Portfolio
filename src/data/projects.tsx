@@ -72,6 +72,11 @@ const PROJECT_SKILLS = {
   ollama: textSkill("Ollama / pgvector", "RAG"),
   bullmq: textSkill("BullMQ", "BQ"),
   aws: textSkill("AWS EC2", "AWS"),
+  htmlcss: textSkill("HTML & CSS", "HTML"),
+  js: textSkill("JavaScript", "JS"),
+  gsap: textSkill("GSAP", "Gsp"),
+  python: textSkill("Python", "Py"),
+  rust: textSkill("Rust", "Rs"),
 };
 
 export type FeaturePoint = 
@@ -382,6 +387,62 @@ const projects: Project[] = [
       ],
     },
     github: "https://github.com/Om005/paynest",
+  },
+  {
+    // id: "mini-projects",
+    id: "mini-projects",
+    category: "Web Utilities & Scripts",
+    title: "Mini Projects",
+    description: "A curated collection of small utility applications, layout clones, algorithmic scripts, and web UI experiments built to learn and master diverse technologies.",
+    overview: "A curated set of small projects and experiments created while learning HTML, CSS, JavaScript, Tailwind, Python, React, Node.js, and Rust. It also includes a few academic or practice code pieces.",
+    features: [
+      {
+        title: "Curated Experiments & Clones",
+        points: [
+          "Aura: Full-stack auth app with Next.js client and Node.js server.",
+          "Desktop-Assistance: Python desktop helper scripts.",
+          "First-animated-web: Simple animated web page.",
+          "Layers-clone: UI layout clone.",
+          "LDPC-Codes: MATLAB scripts and resources for LDPC 5G-NR coding.",
+          "Learning-Rust: Rust learning exercises and examples.",
+          "Music-Player: Web-based local music player.",
+          "Netflix-Clone: Frontend UI clone.",
+          "Password-Manager: Vite-based React app with backend.",
+          "Terminal: Terminal-style web UI and experiments.",
+          "Todo-List: Vite-based React todo app.",
+          "Track_version_control: Basic Rust based version controll system.",
+          "Winter_Of_Code_1: Python practice problems and exercises.",
+          "Winter_Of_Code_2: Basic web IDE where user can run and share their programming laguage codes."
+        ]
+      },
+      {
+        title: "Outcomes",
+        points: [
+          "Solidified key programming and UI skills, providing a hands-on approach to learning.",
+          "Showcases my journey in web development and algorithmic programming."
+        ]
+      }
+    ],
+    src: `${BASE_PATH}/mini-projects.png`,
+    screenshots: [
+      `${BASE_PATH}/mini-projects.png`
+    ],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.htmlcss,
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.gsap,
+      ],
+      backend: [
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.python,
+        PROJECT_SKILLS.rust,
+      ],
+    },
+    github: "https://github.com/Om005/Mini-Projects",
   },
 ];
 
