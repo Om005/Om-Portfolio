@@ -145,7 +145,7 @@ const SlideShow = ({ images }: { images: string[] }) => {
               className="splide__arrow splide__arrow--prev"
               aria-label="Previous slide"
             >
-              <ChevronLeft className="h-4 w-4" strokeWidth={2} />
+              <ChevronRight className="h-4 w-4" strokeWidth={2} />
             </button>
             <button
               type="button"

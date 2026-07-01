@@ -62,12 +62,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
               <div className="relative w-8 h-8 rounded-full overflow-hidden border border-border/50">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/assets/me.jpg"
+                  src="/assets/github-profile.jpeg"
                   alt="Om Chavda"
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80";
-                  }}
                 />
               </div>
               <span className="text-xs text-muted-foreground font-mono">

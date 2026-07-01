@@ -449,10 +449,7 @@ const KeyboardScene = ({ maxDpr }: { maxDpr: number }) => {
     // refresh (e.g. "/#skills#skills#skills") because the existing hash in the
     // address bar was never stripped first. replaceState also avoids polluting
     // browser history with an entry per scrolled-through section.
-    const hash = activeSection === "hero" ? "" : `#${activeSection}`;
-    const url = window.location.pathname + window.location.search + hash;
-    window.history.replaceState(window.history.state, "", url);
-
+    // URL hash update on scroll has been disabled to keep the homepage URL as '/'
     if (!splineApp || isLoading || keyboardRevealed) return;
     updateKeyboardTransform();
   }, [splineApp, isLoading, activeSection]);
