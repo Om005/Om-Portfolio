@@ -45,14 +45,19 @@ const ContactForm = () => {
 
     setLoading(true);
     try {
-      const res = await fetch("/api/send", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ fullName, email, message }),
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_FORM_ACCESS_KEY,
+          name: fullName,
+          email,
+          message,
+        }),
       });
-      if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.error || `Request failed (${res.status})`);
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || `Request failed (${res.status})`);
       }
       toast({
         title: "Thank you!",
@@ -82,6 +87,7 @@ const ContactForm = () => {
   };
   return (
     <form className="min-w-7xl mx-auto sm:mt-4" onSubmit={handleSubmit} aria-busy={loading}>
+      <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_FORM_ACCESS_KEY} />
       <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
         <LabelInputContainer>
           <Label htmlFor="fullname">Full name</Label>
@@ -115,9 +121,6 @@ const ContactForm = () => {
           onChange={(e) => { setMessage(e.target.value); setErrors((p) => ({ ...p, message: undefined })); }}
         />
         {errors.message && <p className="text-sm text-red-500">{errors.message}</p>}
-        <p className="text-sm text-muted-foreground">
-          I&apos;ll never share your data with anyone else. Pinky promise!
-        </p>
       </div>
       <Button
         disabled={loading}

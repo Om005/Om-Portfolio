@@ -29,9 +29,9 @@ const ContactSection = () => {
               <a
                 target="_blank"
                 href={`mailto:${config.email}`}
-                className="text-gray-200 cursor-can-hover rounded-lg"
+                className="text-muted-foreground font-bold cursor-can-hover rounded-lg"
               >
-                {config.email.replace(/@/g, "(at)")}
+                {config.email}
               </a>{" "}
               or drop your info here.
             </CardDescription>
