@@ -91,13 +91,13 @@ const HeroSection = () => {
                     </Button>
                   </BoxReveal>
                 </Link>
-                <div className="md:self-start flex gap-3">
+                <div className="md:self-start flex gap-3 w-full sm:w-auto">
                   <Tooltip delayDuration={300}>
                     <TooltipTrigger asChild>
-                      <Link href={"/about"}>
+                      <Link href={"/about"} className="flex-1 sm:flex-none">
                         <Button
                           variant={"outline"}
-                          className="block w-full overflow-hidden"
+                          className="w-full overflow-hidden"
                         >
                           About Me
                         </Button>

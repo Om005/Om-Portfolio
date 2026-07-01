@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 30px;
+  padding-bottom: 60px; /* prevent overlap with absolute MotionToggle */
 
   a {
     color: hsl(var(--foreground));
@@ -13,8 +14,8 @@
     margin: 0px;
     display: flex;
     overflow: hidden;
-    font-size: 32px;
-    padding-right: 30px;
+    font-size: 26px;
+    padding-right: 24px;
     padding-top: 10px;
     font-weight: 800;
   }
