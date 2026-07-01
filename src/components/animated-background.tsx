@@ -39,7 +39,10 @@ const KeyboardScene = ({ maxDpr }: { maxDpr: number }) => {
   // --- Event Handlers ---
 
   const handleMouseHover = (e: SplineEvent) => {
-    if (!splineApp || selectedSkillRef.current?.name === e.target.name) return;
+    if (!splineApp) return;
+
+    const hoveredSkill = SKILLS[e.target.name as SkillNames];
+    if (selectedSkillRef.current && selectedSkillRef.current === hoveredSkill) return;
 
     if (e.target.name === "body" || e.target.name === "platform") {
       if (selectedSkillRef.current) playReleaseSound();
@@ -50,14 +53,11 @@ const KeyboardScene = ({ maxDpr }: { maxDpr: number }) => {
         splineApp.setVariable("desc", "");
       }
     } else {
-      if (!selectedSkillRef.current || selectedSkillRef.current.name !== e.target.name) {
-        const skill = SKILLS[e.target.name as SkillNames];
-        if (skill) {
-          if (selectedSkillRef.current) playReleaseSound();
-          playPressSound();
-          setSelectedSkill(skill);
-          selectedSkillRef.current = skill;
-        }
+      if (hoveredSkill) {
+        if (selectedSkillRef.current) playReleaseSound();
+        playPressSound();
+        setSelectedSkill(hoveredSkill);
+        selectedSkillRef.current = hoveredSkill;
       }
     }
   };
@@ -203,10 +203,10 @@ const KeyboardScene = ({ maxDpr }: { maxDpr: number }) => {
     const start = () => {
       killSettle();
       killFloat();
-      Object.values(SKILLS)
+      Object.entries(SKILLS)
         .sort(() => Math.random() - 0.5)
-        .forEach((skill, idx) => {
-          const keycap = splineApp.findObjectByName(skill.name);
+        .forEach(([key, skill], idx) => {
+          const keycap = splineApp.findObjectByName(key);
           if (!keycap) return;
           floatTweens.push(
             gsap.to(keycap.position, {
@@ -226,8 +226,8 @@ const KeyboardScene = ({ maxDpr }: { maxDpr: number }) => {
       killFloat();
       killSettle();
       // Finite — GSAP disposes them on completion, so no cleanup timer needed.
-      Object.values(SKILLS).forEach((skill) => {
-        const keycap = splineApp.findObjectByName(skill.name);
+      Object.entries(SKILLS).forEach(([key, skill]) => {
+        const keycap = splineApp.findObjectByName(key);
         if (!keycap) return;
         settleTweens.push(
           gsap.to(keycap.position, {

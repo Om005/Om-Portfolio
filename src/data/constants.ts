@@ -5,7 +5,7 @@ export enum SkillNames {
   HTML = "html",
   CSS = "css",
   REACT = "react",
-  VUE = "vue",
+  SHADCN = "vue",
   NEXTJS = "nextjs",
   TAILWIND = "tailwind",
   NODEJS = "nodejs",
@@ -16,14 +16,14 @@ export enum SkillNames {
   GITHUB = "github",
   PRETTIER = "prettier",
   NPM = "npm",
-  FIREBASE = "firebase",
-  WORDPRESS = "wordpress",
+  CLOUDFLARE = "firebase",
+  RENDER = "wordpress",
   LINUX = "linux",
   DOCKER = "docker",
   NGINX = "nginx",
   AWS = "aws",
-  GCP = "gcp",
-  VIM = "vim",
+  OLLAMA = "gcp",
+  VSCODE = "vim",
   VERCEL = "vercel",
 }
 export type Skill = {
@@ -76,14 +76,14 @@ export const SKILLS: Record<SkillNames, Skill> = {
     color: "#61dafb",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
-  [SkillNames.VUE]: {
+  [SkillNames.SHADCN]: {
     id: 6,
-    name: "vue",
-    label: "Vue",
+    name: "shadcn",
+    label: "shadcn/ui",
     shortDescription:
-      "Progressive framework for elegant and maintainable frontend development.",
-    color: "#41b883",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+      "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    color: "#ffffff",
+    icon: "https://cdn.simpleicons.org/shadcnui",
   },
   [SkillNames.NEXTJS]: {
     id: 7,
@@ -166,22 +166,22 @@ export const SKILLS: Record<SkillNames, Skill> = {
     color: "#fff",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
   },
-  [SkillNames.FIREBASE]: {
+  [SkillNames.CLOUDFLARE]: {
     id: 17,
-    name: "firebase",
-    label: "Firebase",
+    name: "cloudflare",
+    label: "Cloudflare",
     shortDescription:
-      "Backend platform for authentication, databases, and rapid deployment.",
-    color: "#ffca28",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+      "Global network providing secure object storage, edge workers, and CDN services.",
+    color: "#f38020",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg",
   },
-  [SkillNames.WORDPRESS]: {
+  [SkillNames.RENDER]: {
     id: 18,
-    name: "wordpress",
-    label: "WordPress",
-    shortDescription: "Popular CMS for building flexible, content-driven websites.",
-    color: "#007acc",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
+    name: "render",
+    label: "Render",
+    shortDescription: "Cloud platform for deploying and scaling web apps, databases, and APIs.",
+    color: "#46a2bf",
+    icon: "https://cdn.simpleicons.org/render",
   },
   [SkillNames.LINUX]: {
     id: 19,
@@ -214,24 +214,24 @@ export const SKILLS: Record<SkillNames, Skill> = {
     shortDescription:
       "Cloud infrastructure for scalable, secure, and reliable applications.",
     color: "#ff9900",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg",
+    icon: "https://cdn.jsdelivr.net/npm/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
   },
-  [SkillNames.GCP]: {
+  [SkillNames.OLLAMA]: {
     id: 25,
-    name: "gcp",
-    label: "Google Cloud",
+    name: "ollama",
+    label: "Ollama",
     shortDescription:
-      "Cloud platform offering scalable infrastructure and AI services.",
-    color: "#4285f4",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+      "Run large language models locally and database vector search with pgvector.",
+    color: "#ffffff",
+    icon: "https://cdn.simpleicons.org/ollama",
   },
-  [SkillNames.VIM]: {
+  [SkillNames.VSCODE]: {
     id: 23,
-    name: "vim",
-    label: "Vim",
-    shortDescription: "Lightweight, keyboard-driven editor focused on speed and efficiency.",
-    color: "#e34c26",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg",
+    name: "vscode",
+    label: "VS Code",
+    shortDescription: "Powerful, extensible code editor with a rich extensions ecosystem.",
+    color: "#007acc",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
   },
   [SkillNames.VERCEL]: {
     id: 24,
