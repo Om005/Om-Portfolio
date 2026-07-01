@@ -13,7 +13,7 @@ const links: Link[] = [
   },
   {
     title: 'Projects',
-    href: '/#projects',
+    href: '/projects',
     thumbnail: '/assets/nav-link-previews/projects.png'
   },
   // {

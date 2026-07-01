@@ -95,7 +95,7 @@ export default function AboutPage() {
   return (
     <SmoothScroll>
       <AnimatedBackground />
-      <main className="min-h-screen bg-slate-100 dark:bg-transparent pb-32 relative z-1 pt-28">
+      <main className="min-h-screen bg-transparent pb-32 relative z-1 pt-28">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-16">
             
