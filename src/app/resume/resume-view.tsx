@@ -4,11 +4,12 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { Download, ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import ResumeDoodle from "./resume-doodle";
+import { cn } from "@/lib/utils";
 
-// Drop the compiled PDF here: frontend/public/Naresh_Khatri_Resume.pdf
-const RESUME_PATH = "/Naresh_Khatri_Resume.pdf";
+// Drop the compiled PDF here: frontend/public/Om_Chavda_Resume.pdf
+const RESUME_PATH = "/Om_Chavda_Resume.pdf";
 
 export default function ResumeView() {
   return (
@@ -36,16 +37,17 @@ export default function ResumeView() {
             <ArrowLeft className="h-4 w-4" />
             Back to portfolio
           </Link>
-          <Button>
-            <a
-              href={RESUME_PATH}
-              download
-              className="flex gap-2 text-sm transition-colors hover:text-foreground"
-            >
-              <Download className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
-              Download PDF
-            </a>
-          </Button>
+          <a
+            href={RESUME_PATH}
+            download
+            className={cn(
+              buttonVariants({ variant: "default" }),
+              "flex gap-2 text-sm transition-colors cursor-can-hover"
+            )}
+          >
+            <Download className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
+            Download PDF
+          </a>
         </motion.div>
       </div>
 
@@ -60,7 +62,7 @@ export default function ResumeView() {
         >
           <ResumeDoodle
             src={`${RESUME_PATH}#toolbar=0&navpanes=0&view=FitH`}
-            title="Naresh Khatri — Résumé"
+            title="Om Chavda — Resume"
           />
         </motion.div>
       </div>

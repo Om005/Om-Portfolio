@@ -39,28 +39,23 @@ const SocialMediaButtons = () => {
     <div ref={ref} className="z-10 flex">
       {show &&
         BUTTONS.map((button) => (
-          <>
-          <Tooltip delayDuration={300}>
-                    <TooltipTrigger asChild>
-                      <Link href={button.href} key={button.name} target="_blank">
-                        <Button
-                          variant={"ghost"}
-                          className="block w-full overflow-hidden"
-                        >
-                          {button.icon}
-                        </Button>
-                      </Link>
-                    </TooltipTrigger>
-                    <TooltipContent side="top">
-                      <p>
-                      {button.name}
-                      </p>
-                    </TooltipContent>
-                  </Tooltip>
-          {/* <Link href={button.href} key={button.name} target="_blank">
-            <Button variant={"ghost"}>{button.icon}</Button>
-          </Link> */}
-          </>
+          <Tooltip key={button.name} delayDuration={300}>
+            <TooltipTrigger asChild>
+              <Link href={button.href} target="_blank">
+                <Button
+                  variant={"ghost"}
+                  className="block w-full overflow-hidden"
+                >
+                  {button.icon}
+                </Button>
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent side="top">
+              <p>
+                {button.name}
+              </p>
+            </TooltipContent>
+          </Tooltip>
         ))}
     </div>
   );
