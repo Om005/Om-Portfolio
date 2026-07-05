@@ -27,7 +27,7 @@ const BUTTONS = [
   },
   {
     name: "Resume",
-    href: config.resume,
+    href: "/resume",
     icon: <FileText size={"24"} color={"#fff"} />,
   },
 ];

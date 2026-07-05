@@ -46,6 +46,6 @@ const config = {
     codeforces: "https://codeforces.com/profile/Om_007",
     codechef: "https://www.codechef.com/users/chavdaom84",
   },
-  resume: "https://drive.google.com/file/d/1443fj2ALAkDxfD2-cm-6BExdOBv-TBlA/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1g6k-fudghOHhVbhB36ZKqH7jS5y42bf0/view?usp=sharing",
 };
 export { config };

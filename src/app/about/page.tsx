@@ -203,7 +203,7 @@ export default function AboutPage() {
                         Email
                       </Link>
                       <Link
-                        href={config.resume}
+                        href={"/resume"}
                         target="_blank"
                         className="flex items-center gap-2 bg-secondary/30 hover:bg-secondary/60 text-foreground border border-border/40 rounded-full px-4 py-2 transition-all cursor-can-hover"
                       >
